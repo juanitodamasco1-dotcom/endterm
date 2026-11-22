@@ -84,7 +84,6 @@ function RegistrarConsoleInner() {
     const pass = authPass.trim();
     if (!user || !pass) {
       toast("Enter your username and password.", true);
-      return;
     }
     const expectedUser = (state.auth.username || DEFAULT_ADMIN_USERNAME).toLowerCase();
     const h = await sha256Hex(pass);
